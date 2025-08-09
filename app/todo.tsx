@@ -27,7 +27,6 @@ export default function ToDoScreen() {
         <TextInput
           value={userInput}
           onChangeText={text => setUserInput(text)}
-          placeholder="Enter a task..."
           style={styles.input}
         />
         <Button title="Add" onPress={addTask} />
