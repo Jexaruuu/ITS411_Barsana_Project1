@@ -10,7 +10,7 @@ export default function ToDoScreen() {
   }, [userInput]);
 
   const addTask = () => {
-    const trimmed = userInput.trim();
+    const trimmed = userInput.trim(); 
     if (!trimmed) return;
     setTasks(prev => [...prev, { id: Date.now().toString(), title: trimmed }]);
     setUserInput('');
@@ -27,6 +27,7 @@ export default function ToDoScreen() {
         <TextInput
           value={userInput}
           onChangeText={text => setUserInput(text)}
+          placeholder="Enter a task..."  // (added)
           style={styles.input}
         />
         <Button title="Add" onPress={addTask} />
