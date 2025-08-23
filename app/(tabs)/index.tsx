@@ -1,6 +1,5 @@
 import { Image } from 'expo-image';
-import { Link } from 'expo-router'; // ← added
-import { Button, Platform, StyleSheet, View } from 'react-native'; // ← added Button, View
+import { Platform, StyleSheet } from 'react-native';
 
 import { HelloWave } from '@/components/HelloWave';
 import ParallaxScrollView from '@/components/ParallaxScrollView';
@@ -22,13 +21,6 @@ export default function HomeScreen() {
         <ThemedText type="title">Welcome!</ThemedText>
         <HelloWave />
       </ThemedView>
-
-      {/* ← NEW: quick button to open your To-Do page */}
-      <View style={styles.ctaRow}>
-        <Link href="/todo" asChild>
-          <Button title="Open To-Do" onPress={() => {}} />
-        </Link>
-      </View>
 
       <ThemedView style={styles.stepContainer}>
         <ThemedText type="subtitle">Step 1: Try it</ThemedText>
@@ -79,10 +71,5 @@ const styles = StyleSheet.create({
     width: '100%',
     height: '100%',
     position: 'absolute',
-  },
-  // ← NEW: small spacing for the To-Do button row
-  ctaRow: {
-    marginVertical: 12,
-    alignSelf: 'flex-start',
   },
 });
