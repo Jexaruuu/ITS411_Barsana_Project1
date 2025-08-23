@@ -16,7 +16,6 @@ const firebaseConfig = {
 
 const app = getApps().length ? getApp() : initializeApp(firebaseConfig);
 
-// --- TS-safe handle for getReactNativePersistence ---
 const getRNPersistence =
   (Auth as any).getReactNativePersistence as
     | ((storage: typeof AsyncStorage) => any)
