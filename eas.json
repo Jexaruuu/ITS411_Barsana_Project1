@@ -18,6 +18,13 @@
       }
     },
     "production": {
+      "distribution": "store",
+      "android": {
+        "buildType": "apk",
+        "env": {
+          "ANDROID_GOOGLE_SERVICES": "./android/app/google-services.json"
+        }
+      },
       "autoIncrement": true
     }
   },
