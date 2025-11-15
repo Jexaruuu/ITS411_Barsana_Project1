@@ -13,16 +13,16 @@
       "android": {
         "buildType": "apk",
         "env": {
-          "ANDROID_GOOGLE_SERVICES": "./android/app/google-services.json"
+          "ANDROID_GOOGLE_SERVICES": "./google-services.json"
         }
       }
     },
     "production": {
-      "distribution": "store",
+      "distribution": "internal",
       "android": {
         "buildType": "apk",
         "env": {
-          "ANDROID_GOOGLE_SERVICES": "./android/app/google-services.json"
+          "ANDROID_GOOGLE_SERVICES": "./google-services.json"
         }
       },
       "autoIncrement": true
