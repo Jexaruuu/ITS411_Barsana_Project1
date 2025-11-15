@@ -1,7 +1,7 @@
 {
   "expo": {
     "name": "ITS411_Project",
-    "slug": "ITS411_Project",
+    "slug": "its411project",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/images/icon.png",
@@ -39,6 +39,13 @@
     ],
     "experiments": {
       "typedRoutes": true
-    }
+    },
+    "extra": {
+      "router": {},
+      "eas": {
+        "projectId": "593f1258-7c04-4351-9b8b-566dc092f2d8"
+      }
+    },
+    "owner": "jexterbarsana"
   }
 }

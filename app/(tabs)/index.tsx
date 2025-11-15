@@ -1,10 +1,9 @@
-import { Image } from 'expo-image';
-import { Platform, StyleSheet } from 'react-native';
-
 import { HelloWave } from '@/components/HelloWave';
 import ParallaxScrollView from '@/components/ParallaxScrollView';
 import { ThemedText } from '@/components/ThemedText';
 import { ThemedView } from '@/components/ThemedView';
+import { Image } from 'expo-image';
+import { Platform, StyleSheet } from 'react-native';
 
 export default function HomeScreen() {
   return (
@@ -28,21 +27,17 @@ export default function HomeScreen() {
           Edit <ThemedText type="defaultSemiBold">app/(tabs)/index.tsx</ThemedText> to see changes.
           Press{' '}
           <ThemedText type="defaultSemiBold">
-            {Platform.select({
-              ios: 'cmd + d',
-              android: 'cmd + m',
-              web: 'F12',
-            })}
+            {Platform.select({ ios: 'cmd + d', android: 'cmd + m', web: 'F12' })}
           </ThemedText>{' '}
           to open developer tools.
         </ThemedText>
       </ThemedView>
+
       <ThemedView style={styles.stepContainer}>
         <ThemedText type="subtitle">Step 2: Explore</ThemedText>
-        <ThemedText>
-          {`Tap the Explore tab to learn more about what's included in this starter app.`}
-        </ThemedText>
+        <ThemedText>{`Tap the Explore tab to learn more about what's included in this starter app.`}</ThemedText>
       </ThemedView>
+
       <ThemedView style={styles.stepContainer}>
         <ThemedText type="subtitle">Step 3: Get a fresh start</ThemedText>
         <ThemedText>
@@ -58,18 +53,7 @@ export default function HomeScreen() {
 }
 
 const styles = StyleSheet.create({
-  titleContainer: {
-    flexDirection: 'row',
-    alignItems: 'center',
-    gap: 8,
-  },
-  stepContainer: {
-    gap: 8,
-    marginBottom: 8,
-  },
-  fullImage: {
-    width: '100%',
-    height: '100%',
-    position: 'absolute',
-  },
+  titleContainer: { flexDirection: 'row', alignItems: 'center', gap: 8 },
+  stepContainer: { gap: 8, marginBottom: 8 },
+  fullImage: { width: '100%', height: '100%', position: 'absolute' },
 });
